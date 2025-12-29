@@ -16,13 +16,13 @@ async function conntectToDB(){
 
 conntectToDB()
 
-const truckCtrl = require("./controllers/tracks")
+const trackCtrl = require("./controllers/tracks")
 
 const morgan = require("morgan")
 app.use(morgan("dev"))
 app.use(express.json())
 
-app.use("/trucks", truckCtrl)
+app.use("/tracks", trackCtrl)
 
 app.listen(3000,()=>{
     console.log('App is running on port 3000')
